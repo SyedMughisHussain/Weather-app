@@ -4,6 +4,7 @@ class Weather {
   double? wind;
   int? humidity;
   int? pressure;
+  // ignore: non_constant_identifier_names
   double? feels_like;
 
   Weather(
@@ -12,6 +13,7 @@ class Weather {
       required this.wind,
       required this.humidity,
       required this.pressure,
+      // ignore: non_constant_identifier_names
       required this.feels_like});
 
   Weather.fromJson(Map<String, dynamic> json) {

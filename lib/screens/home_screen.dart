@@ -3,7 +3,7 @@ import '../services/weather_api_client.dart';
 
 import '../model/weather.dart';
 import '../widgets/current_weather_widget.dart';
-import 'package:http/http.dart' as http;
+// ignore: depend_on_referenced_packages
 import '../widgets/additional_information_widget.dart';
 
 class HomeScreen extends StatefulWidget {
