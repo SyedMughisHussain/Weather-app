@@ -3,7 +3,7 @@ class Weather {
   double? temp;
   double? wind;
   int? humidity;
-  double? pressure;
+  int? pressure;
   double? feels_like;
 
   Weather(

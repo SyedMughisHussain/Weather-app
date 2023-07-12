@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Weather? data;
 
   Future<void> getData() async {
-    data = (await client.getData('Karachi'));
+    data = (await client.getData('Faisalabad'));
   }
 
   @override
@@ -42,7 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  currentWeatherWidget(Icons.wb_sunny_rounded, "${data!.temp}",
+                  currentWeatherWidget(
+                      Icons.wb_sunny_rounded,
+                      "${(data!.temp! - 273.15).toStringAsFixed(1)} ⁰C",
                       "${data!.cityName}"),
                   const SizedBox(
                     height: 40.0,
