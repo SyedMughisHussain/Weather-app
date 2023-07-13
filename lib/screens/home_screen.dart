@@ -18,7 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Weather? data;
 
   Future<void> getData() async {
-    data = (await client.getData(searchController.text));
+    data = await client.getData(
+        searchController.text.isEmpty ? "Karachi" : searchController.text);
   }
 
   @override
@@ -91,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 10.0,
                     ),
                     addtionalInformation('${data!.wind}', "${data!.pressure}",
-                        "${data!.humidity}", "${data!.feels_like}"),
+                        "${data!.humidity}", "${data!.visibility}"),
                   ],
                 ),
               );

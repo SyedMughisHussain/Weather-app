@@ -46,7 +46,7 @@ Widget addtionalInformation(
               pressure,
             ),
             const Text(
-              'Feels Like',
+              'Visibility',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
               ),
