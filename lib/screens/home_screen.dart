@@ -77,16 +77,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    currentWeatherWidget(Icons.wb_sunny_rounded,
-                        "${data!.temp!} ⁰C", "${data!.cityName}"),
+                    currentWeatherWidget(
+                        context,
+                        Icons.wb_sunny_rounded,
+                        "${data!.temp!}⁰",
+                        "${data!.cityName}",
+                        "${data!.wind}km/h",
+                        "${data!.humidity}",
+                        "${data!.clouds}"),
                     const SizedBox(
-                      height: 40.0,
+                      height: 20.0,
                     ),
-                    const SizedBox(
-                      height: 10.0,
-                    ),
-                    addtionalInformation('${data!.wind}', "${data!.pressure}",
-                        "${data!.humidity}", "${data!.visibility}"),
+                    addtionalInformation(
+                        '${data!.temp_min}',
+                        "${data!.temp_max}",
+                        "${data!.humidity}",
+                        "${data!.visibility}"),
                   ],
                 ),
               );

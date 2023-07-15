@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget addtionalInformation(
-    String wind, String pressure, String humidity, String feelsLike) {
+    String tempMin, String tempMax, String pressure, String visibility) {
   return Container(
     padding: const EdgeInsets.all(18),
     width: double.infinity,
@@ -11,22 +11,22 @@ Widget addtionalInformation(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              'Wind',
+              'Temp Min',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
               ),
             ),
             Text(
-              wind,
+              tempMin,
             ),
             const Text(
-              'Humidity',
+              'Temp Max',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
               ),
             ),
             Text(
-              humidity,
+              tempMax,
             )
           ],
         ),
@@ -52,7 +52,7 @@ Widget addtionalInformation(
               ),
             ),
             Text(
-              feelsLike,
+              visibility,
             )
           ],
         ),
