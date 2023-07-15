@@ -82,12 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 40.0,
                     ),
-                    const Text(
-                      'Additional Information',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
-                    ),
-                    const Divider(),
                     const SizedBox(
                       height: 10.0,
                     ),

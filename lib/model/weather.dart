@@ -6,6 +6,7 @@ class Weather {
   int? pressure;
   // ignore: non_constant_identifier_names
   int? visibility;
+  //String? weather;
 
   Weather({
     required this.cityName,
@@ -15,6 +16,7 @@ class Weather {
     required this.pressure,
     // ignore: non_constant_identifier_names
     required this.visibility,
+    // required this.weather,
   });
 
   Weather.fromJson(Map<String, dynamic> json) {
@@ -24,5 +26,6 @@ class Weather {
     humidity = json['main']['humidity'];
     pressure = json['main']['pressure'];
     visibility = json['visibility'];
+    //weather = json['weather']['main'];
   }
 }
