@@ -25,17 +25,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
         leading: const Icon(
           Icons.menu,
-          color: Colors.white,
+          color: Colors.black,
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         title: const Text(
           'Weather App',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
       ),
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white),
+                          border: Border.all(color: Colors.black),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(23))),
                       height: 50,
@@ -67,14 +67,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               icon: const Icon(Icons.search)),
                           Expanded(
                               child: TextField(
-                            cursorColor: Colors.white,
+                            cursorColor: Colors.black,
                             controller: searchController,
                             decoration: const InputDecoration(
-                                fillColor: Colors.white,
+                                fillColor: Colors.black,
                                 //fillColor: Colors.white,
                                 border: InputBorder.none,
                                 hintText: 'Search City',
-                                hintStyle: TextStyle(color: Colors.white),
+                                hintStyle: TextStyle(color: Colors.grey),
                                 focusedBorder: InputBorder.none),
                             keyboardType: TextInputType.text,
                           )),
@@ -93,9 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         "${data!.humidity}",
                         "${data!.clouds}",
                         '${data!.weather}'),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
+                    // const SizedBox(
+                    //   height: 20.0,
+                    // ),
                     addtionalInformation(
                         '${data!.temp_min}',
                         "${data!.temp_max}",

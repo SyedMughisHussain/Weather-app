@@ -15,7 +15,7 @@ Widget currentWeatherWidget(
   return Padding(
     padding: const EdgeInsets.only(left: 8, right: 8),
     child: Container(
-      height: height * 0.4,
+      height: height * 0.5,
       padding: const EdgeInsets.only(top: 10),
       decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -48,14 +48,18 @@ Widget currentWeatherWidget(
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
           Icon(
             icon,
             color: Colors.orange,
             size: 64.0,
           ),
-          Text(weather),
+          Text(
+            weather,
+            style: const TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+          ),
           // const SizedBox(
           //   height: 10.0,
           // ),

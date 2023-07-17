@@ -14,11 +14,11 @@ Widget addtionalInformation(
               children: [
                 const Text(
                   'Temp Min',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
                 Text(
                   tempMin,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 ),
               ],
             ),
@@ -26,11 +26,11 @@ Widget addtionalInformation(
               children: [
                 const Text(
                   'Temp Max',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
                 Text(
                   tempMax,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 )
               ],
             ),
@@ -47,12 +47,12 @@ Widget addtionalInformation(
                 const Text(
                   'Pressure',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 Text(
                   pressure,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 ),
               ],
             ),
@@ -61,12 +61,12 @@ Widget addtionalInformation(
                 const Text(
                   'Visibility',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 Text(
                   visibility,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 )
               ],
             ),
