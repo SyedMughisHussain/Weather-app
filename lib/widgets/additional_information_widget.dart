@@ -8,52 +8,68 @@ Widget addtionalInformation(
     child: Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text(
-              'Temp Min',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
+            Column(
+              children: [
+                const Text(
+                  'Temp Min',
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  tempMin,
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ],
             ),
-            Text(
-              tempMin,
+            Column(
+              children: [
+                const Text(
+                  'Temp Max',
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  tempMax,
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                )
+              ],
             ),
-            const Text(
-              'Temp Max',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Text(
-              tempMax,
-            )
           ],
         ),
         const SizedBox(
-          height: 8,
+          height: 20,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text(
-              'Pressure',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
+            Column(
+              children: [
+                const Text(
+                  'Pressure',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  pressure,
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ],
             ),
-            Text(
-              pressure,
+            Column(
+              children: [
+                const Text(
+                  'Visibility',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  visibility,
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
+                )
+              ],
             ),
-            const Text(
-              'Visibility',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Text(
-              visibility,
-            )
           ],
         ),
       ],

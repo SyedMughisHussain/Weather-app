@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 
-Widget currentWeatherWidget(BuildContext context, IconData icon, String temp,
-    String cityName, String wind, String humidity, String cloud) {
+Widget currentWeatherWidget(
+  BuildContext context,
+  IconData icon,
+  String temp,
+  String cityName,
+  String wind,
+  String humidity,
+  String cloud,
+  String weather,
+) {
   double height = MediaQuery.of(context).size.height;
   //double width = MediaQuery.of(context).size.width;
   return Padding(
     padding: const EdgeInsets.only(left: 8, right: 8),
     child: Container(
-      height: height * 0.5,
+      height: height * 0.4,
       padding: const EdgeInsets.only(top: 10),
       decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -23,12 +31,21 @@ Widget currentWeatherWidget(BuildContext context, IconData icon, String temp,
         crossAxisAlignment: CrossAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            cityName,
-            style: const TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.location_on,
+                color: Colors.white,
+              ),
+              Text(
+                cityName,
+                style: const TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
           const SizedBox(
             height: 10,
@@ -38,6 +55,7 @@ Widget currentWeatherWidget(BuildContext context, IconData icon, String temp,
             color: Colors.orange,
             size: 64.0,
           ),
+          Text(weather),
           // const SizedBox(
           //   height: 10.0,
           // ),
@@ -105,7 +123,7 @@ Widget currentWeatherWidget(BuildContext context, IconData icon, String temp,
                   Image.asset(
                     'assets/images/cloud.png',
                     height: 40,
-                    width: 40,
+                    width: 50,
                     fit: BoxFit.cover,
                   ),
                   Text(

@@ -11,20 +11,23 @@ class Weather {
   double? temp_min;
   // ignore: non_constant_identifier_names
   double? temp_max;
+  String? weather;
 
-  Weather(
-      {required this.cityName,
-      required this.temp,
-      required this.wind,
-      required this.humidity,
-      required this.pressure,
-      // ignore: non_constant_identifier_names
-      required this.visibility,
-      required this.clouds,
-      // ignore: non_constant_identifier_names
-      required this.temp_min,
-      // ignore: non_constant_identifier_names
-      required this.temp_max});
+  Weather({
+    required this.cityName,
+    required this.temp,
+    required this.wind,
+    required this.humidity,
+    required this.pressure,
+    // ignore: non_constant_identifier_names
+    required this.visibility,
+    required this.clouds,
+    // ignore: non_constant_identifier_names
+    required this.temp_min,
+    // ignore: non_constant_identifier_names
+    required this.temp_max,
+    required this.weather,
+  });
 
   Weather.fromJson(Map<String, dynamic> json) {
     cityName = json['name'];
@@ -36,5 +39,6 @@ class Weather {
     clouds = json['clouds']['all'];
     temp_min = json['main']['temp_min'];
     temp_max = json['main']['temp_max'];
+    weather = json['weather'][0]['main'];
   }
 }
